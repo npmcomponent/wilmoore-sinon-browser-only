@@ -973,7 +973,7 @@ var sinon = (function (formatio) {
         };
     } else if (isNode) {
         try {
-            var util = require("util");
+            // commented out by npm-component: var util = require("util");
             sinon.format = function (value) {
                 return typeof value == "object" && value.toString === Object.prototype.toString ? util.inspect(value) : value;
             };
